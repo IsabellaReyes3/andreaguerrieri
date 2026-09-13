@@ -32,8 +32,8 @@ section{position:relative}
 .quien p b{color:#fff;font-weight:600}
 .porque{background:var(--beige)}
 .porque .wrap{padding:88px 32px;text-align:center;max-width:900px}
-.porque .lead{font-size:clamp(21px,3vw,32px);color:var(--ink);line-height:1.35;font-weight:600;letter-spacing:-.3px}
-.porque .lead b{color:var(--mauve);font-weight:700}
+.porque .lead{font-family:var(--serif);font-size:clamp(23px,3.2vw,36px);color:var(--ink);line-height:1.4;font-weight:500}
+.porque .lead b{color:var(--mauve);font-weight:600;font-style:italic}
 .porque .p{margin-top:20px;font-size:17px;color:var(--soft);max-width:680px;margin:20px auto 0}
 .serv{background:var(--cream)}
 .serv .wrap{padding:88px 32px}
