@@ -24,7 +24,6 @@ section{position:relative}
 .shead{text-align:center;margin-bottom:40px}
 .shead .ey{font-family:'Dancing Script',cursive;font-weight:600;font-size:clamp(26px,3.6vw,38px);color:var(--mauve);display:block}
 .shead .ti{font-weight:700;font-size:clamp(26px,3.6vw,40px);letter-spacing:2px;text-transform:uppercase}
-.shead .ti.light{color:var(--ink)}
 .quien{background:var(--mauve);color:var(--cream)}
 .quien .wrap{padding:88px 32px;display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:center;max-width:1040px}
 .quien .hi{font-family:'Dancing Script',cursive;font-size:clamp(40px,5.5vw,68px);color:var(--cream);line-height:.9}
@@ -46,28 +45,28 @@ section{position:relative}
 .card p{font-size:15px;color:var(--soft)}
 .card .tags{margin-top:15px;display:flex;flex-wrap:wrap;gap:7px}
 .card .tags span{font-size:12.5px;font-weight:600;background:rgba(146,126,124,.16);color:var(--soft);padding:5px 11px;border-radius:30px}
-/* TRABAJOS home = niche cards */
-.work{background:var(--mauve)}
-.work .wrap{padding:82px 32px}
-.work .shead .ey{color:var(--cream);opacity:.92}
-.work .shead .ti.light{color:#fff}
-.niche-cards{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;max-width:1000px;margin:0 auto}
-.ncard{position:relative;aspect-ratio:4/5;border-radius:18px;overflow:hidden;background-size:cover;background-position:center;text-decoration:none;box-shadow:0 16px 36px rgba(46,36,32,.34);display:block;transition:transform .22s}
-.ncard::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(46,36,32,.05),rgba(46,36,32,.78))}
-.ncard:hover{transform:translateY(-5px)}
-.ncard-in{position:absolute;inset:0;z-index:2;display:flex;flex-direction:column;justify-content:flex-end;padding:22px;color:#fff}
-.ncard-eyebrow{font-size:12.5px;font-weight:700;letter-spacing:1px;text-transform:uppercase;opacity:.85}
-.ncard-name{font-weight:700;font-size:clamp(24px,2.6vw,30px);letter-spacing:1px;text-transform:uppercase;line-height:1;margin-top:2px}
-.ncard-go{margin-top:9px;font-size:13px;font-weight:600;letter-spacing:.4px;color:var(--cream);opacity:.92}
-/* NICHE PAGE */
+/* CTA a trabajos (home) */
+.cta-trabajos{background:var(--mauve);color:var(--cream)}
+.cta-trabajos .wrap{padding:80px 32px;text-align:center}
+.cta-trabajos .ey{font-family:'Dancing Script',cursive;font-size:clamp(26px,3.4vw,36px);color:var(--cream);opacity:.92;display:block}
+.cta-trabajos h2{font-weight:700;font-size:clamp(26px,3.6vw,40px);letter-spacing:2px;text-transform:uppercase;color:#fff;margin-top:2px}
+.cta-trabajos p{margin:12px auto 0;color:#f0e7dc;max-width:520px;font-size:16px}
+.cta-btn{display:inline-block;margin-top:26px;background:var(--cream);color:var(--ink);text-decoration:none;font-weight:700;font-size:15.5px;padding:15px 32px;border-radius:40px;transition:transform .2s}
+.cta-btn:hover{transform:translateY(-3px)}
+/* NICHE PAGE HEADER */
 .nhead{background:linear-gradient(180deg,var(--beige2),var(--beige));padding:38px 0 44px}
 .nhead .back{color:var(--soft);text-decoration:none;font-weight:600;font-size:14px}
 .nhead .back:hover{color:var(--ink)}
 .nhead .ey{font-family:'Dancing Script',cursive;color:var(--mauve);font-size:30px;display:block;margin-top:16px;line-height:1}
 .nhead-title{font-weight:700;font-size:clamp(42px,8vw,86px);text-transform:uppercase;letter-spacing:-1px;line-height:1;color:#fff;text-shadow:0 2px 22px rgba(62,50,45,.12)}
 .nhead-sub{margin-top:10px;color:var(--soft);font-size:16px}
-.nhead-marcas{margin-top:4px;color:var(--mauve);font-weight:600;font-size:14px;letter-spacing:.3px}
-.nichepage .wrap{padding:56px 32px 82px}
+/* TRABAJOS (niches + brand grid) */
+.work{background:var(--mauve)}
+.work .wrap{padding:66px 32px 82px}
+.niche{margin-bottom:60px}
+.niche:last-child{margin-bottom:0}
+.niche-title{font-weight:700;font-size:clamp(24px,3.4vw,36px);letter-spacing:2px;text-transform:uppercase;color:#fff;text-align:center}
+.niche-sub{text-align:center;color:#efe6da;opacity:.8;font-size:14px;margin:4px 0 22px}
 .grid{display:flex;flex-wrap:wrap;gap:16px;justify-content:center}
 .tile{flex:0 1 210px;max-width:220px;position:relative;border-radius:15px;overflow:hidden;aspect-ratio:9/16;box-shadow:0 12px 30px rgba(62,50,45,.3);background:#000}
 .tile .blabel{position:absolute;top:10px;left:10px;z-index:2;font-family:'Quicksand';font-size:12.5px;font-weight:700;letter-spacing:.5px;color:#fff;background:rgba(46,36,32,.62);backdrop-filter:blur(4px);padding:4px 12px;border-radius:30px}
@@ -106,8 +105,7 @@ footer{background:var(--ink);color:rgba(246,239,229,.55);text-align:center;paddi
   .hero .photo{justify-self:center;margin-left:0;margin-top:26px;justify-content:center}
   .hero .photo img{width:min(340px,74vw)}
   .quien .wrap{grid-template-columns:1fr;gap:20px;text-align:center;max-width:600px}
-  .quien .wrap,.porque .wrap,.serv .wrap,.work .wrap{padding-top:66px;padding-bottom:66px}
-  .niche-cards{grid-template-columns:repeat(2,1fr)}
+  .quien .wrap,.porque .wrap,.serv .wrap{padding-top:66px;padding-bottom:66px}
 }
 @media(max-width:560px){
   .wrap{padding:0 20px}
@@ -117,6 +115,4 @@ footer{background:var(--ink);color:rgba(246,239,229,.55);text-align:center;paddi
   .tile{flex-basis:44%;max-width:47%}
   .logos .logo{width:132px;height:84px}
   .contact .links a{width:100%;justify-content:center}
-  .niche-cards{grid-template-columns:1fr 1fr;gap:12px}
-  .ncard-name{font-size:20px}
 }
